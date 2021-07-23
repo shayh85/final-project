@@ -16,8 +16,7 @@ import sys
 import pytest
 
 STATES_CAPITALS = {
-    'Alabama' : 'Montgomery',
-    'Alaska' : 'Juneau',
+    'Alabama' : 'Montgomery','Alaska' : 'Juneau',
     'Arizona' : 'Phoenix',
     'Arkansas': 'Little Rock',
     'California' : 'Sacramento',
@@ -59,6 +58,8 @@ STATES_CAPITALS = {
     'South Dakota' : 'Pierre',
     'Tennessee' : 'Nashville',
     'Texas' : 'Austin',
+    'Israel' : 'Tel-Aviv',
+    'Israel' : 'Jerusalem',
     'Utah' : 'Salt Lake City',
     'Vermont' : 'Montpelier',
     'Virginia' : 'Richmond',
@@ -71,23 +72,29 @@ STATES_CAPITALS = {
 
 def capital_of_Idaho():
     # Your code here
+    print(STATES_CAPITALS['Idaho'])
     pass
 
 def all_states():
     # Your code here
+    print(STATES_CAPITALS.keys())
     pass
 
 def all_capitals():
     # Your code here
+    print(STATES_CAPITALS.values())
     pass
 
 def states_capitals_string():
     # Your code here
+    for key in STATES_CAPITALS:
+        print("{key}->{value},".format(key=key,value=STATES_CAPITALS[key]))
     pass
 
 
 
 def get_state(capital):
+    print(STATES_CAPITALS[capital])
     pass
 
 
@@ -111,6 +118,11 @@ def test_capital_to_state_unknown():
 
 
 def main():
+    capital_of_Idaho()
+    all_states()
+    all_capitals()
+    states_capitals_string()
+    get_state('Israel')
     return pytest.main(__file__)
 
 
